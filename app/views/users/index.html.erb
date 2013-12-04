@@ -1,0 +1,38 @@
+<div class="container">
+            
+            <h2 class="title">Look for friends today</h3>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-bg-1"><input type="text" class="form-control" name="Age" placeholder="Age (Years)"></div>
+                        
+                        <div class="form-bg-1">
+                            <div class="styled-select">
+                                <select class="form-control col-md-3" name="weight_select">
+                                    <option value="pounds">By Pounds</option>
+                                    <option value="kilo">By Kilo (KG)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-bg-2" style="padding:18px 20px 18px 20px;">
+                            <input type="radio" value="Male" name="Male" id="Male"><label for="Male" style="margin-right:30px;"><span></span>Male</label>
+                            <input type="radio" value="Female" name="Female" id="Female"><label for="Female"><span></span>Female</label>
+                        </div>
+                        
+                        <div class="form-bg-2"><input type="text" class="form-control" name="duration" placeholder="Favorite Activities"></div>
+                        <input type="hidden" name="calculator" value="adv_calculator"/>
+                    </form>
+                    <button id="selectBtn" class="button_medium add_top_30">Calculate</button>
+                </div>
+                
+                <div class="col-md-5">
+                	<div class="result">
+                        <h2>Friends Found</h2>
+                        <div id="adv_calculator_value">0</div>
+                    </div>   
+                </div>
+                
+            </div>
+</div>

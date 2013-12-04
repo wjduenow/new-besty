@@ -1,0 +1,82 @@
+<div class="container">
+        
+ <h3 class="title"><%= "#{@user.fname} #{@user.lname}" %></h3>
+             <div class="row">
+                    <div class="col-md-6">
+                   <h3>Some words about me</h3>
+                    <p><strong>Qui at commune signiferumque. In mel labores moderatius, tantas saperet facilisi quo ut. Vero wisi civibus ea vim. An tota nostro sit, mel ei utinam ancillae, mutat dolores mea et. Homero iriure imperdiet eu mel. </strong>Ei enim viderer pri. Sed in eros nobis, te cum invidunt probatus. Mel an aeque efficiendi. Te populo ocurreret 
+reprehendunt usu, sit at purto iudicabit.</p>
+                    <p>Qui at commune signiferumque. In mel labores moderatius, tantas saperet facilisi quo ut. Vero wisi civibus ea vim. An tota nostro sit, mel ei utinam ancillae, mutat dolores mea et. Homero iriure imperdiet eu mel. Ei enim viderer pri. Sed in eros nobis, te cum invidunt probatus. Mel an aeque efficiendi. Te populo ocurreret 
+reprehendunt usu, sit at purto iudicabit. Qui at commune signiferumque. In mel labores moderatius, tantas saperet facilisi quo ut. Vero wisi civibus ea vim. An tota nostro sit, mel ei utinam ancillae, mutat dolores mea et. Homero iriure imperdiet eu mel. Ei enim viderer pri. Sed in eros nobis, te cum invidunt probatus. Mel an aeque efficiendi. Te populo ocurreret 
+reprehendunt usu, sit at purto iudicabit.</p>
+                    </div>
+                    
+                <p class="col-md-6 text-center"><img src="<%= @user.profile_image %>" alt="" class="img-circle style img-responsive"></p>
+                
+                </div><!-- End row -->
+            
+            <h3 class="title">Facts About <%= @user.fname %></h3>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Dicunt omnesque</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, quando dicunt omnesque per id, his ex probatus perpetua. <strong>Vix id suas dicit, id sit ferri primis nusquam</strong>. Iudico iuvaret epicuri ei eam, amet aperiri mel id, no 	wisi dolorem quo. Lorem ipsum dolor sit amet, quando dicunt omnesque per id, his ex probatus perpetua. Vix id suas dicit, id sit ferri primis nusquam. Iudico iuvaret epicuri ei eam, amet aperiri mel id, no wisi dolorem quo.</p>
+                    <h5>Details</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, quando dicunt omnesque per id, his ex probatus perpetua. Vix id suas dicit, id sit ferri primis nusquam. Iudico iuvaret epicuri ei eam, amet aperiri mel id, no wisi dolorem quo. Lorem ipsum dolor sit amet, quando dicunt omnesque per id, his ex probatus perpetua. Vix id suas dicit, id sit ferri primis nusquam. Iudico iuvaret epicuri ei eam, amet aperiri mel id, no wisi dolorem quo.
+                    </p>
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    <h4>Personality Scores</h4>
+                    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" data-percentage="90"></div>
+                    </div>
+                   <p>Willingness to Listen</p>
+                    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" data-percentage="70"></div>
+                    </div>
+                    <p>Fun Focus</p>
+                    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar"  data-percentage="40"></div>
+                    </div>
+                      <p>Gossip Hound</p>
+                    
+                </div><!-- End col-md-5 -->
+            </div> <!-- End row -->
+ </div> 
+
+
+ <script type="text/javascript">
+/* <![CDATA[ */
+
+setTimeout(function(){
+
+    $('.progress .progress-bar').each(function() {
+        var me = $(this);
+        var perc = me.attr("data-percentage");
+
+        var current_perc = 0;
+
+        var progress = setInterval(function() {
+            if (current_perc>=perc) {
+                clearInterval(progress);
+            } else {
+                current_perc +=1;
+                me.css('width', (current_perc)+'%');
+            }
+
+            me.text((current_perc)+'%');
+
+        }, 50);
+
+    });
+
+},500);
+  /* ]]> */
+</script> 
