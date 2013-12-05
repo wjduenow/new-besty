@@ -10,4 +10,7 @@ class WelcomeController < ApplicationController
 
   def pricing
   end
+
+  def signup
+  end
 end

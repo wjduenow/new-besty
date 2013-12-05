@@ -17,6 +17,7 @@ NewBesty::Application.routes.draw do
       get 'types'
       get 'social'
       get 'pricing'
+      get 'signup'
     end
   end
   resources :users
