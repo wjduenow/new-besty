@@ -30,12 +30,12 @@ NewBesty::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    :address => "email-smtp.us-east-1.amazonaws.com",
+    :address => "email-smtp.us-east-1.amazonaws.comv",
     :port => 465,
-    :domain => "raybeam.com",
+    :domain => "friend-os.com",
     :authentication => :login,
-    :user_name => "AKIAIOPYQ3FTGMMJZTJA",
-    :password => "AjXux2bdHdJRdubGTR9wuNZdOuWvLcYu1QK/KbPWYhOa"
+    :user_name => "AKIAJVNMLHSJJH47V7LA",
+    :password => "AgOXxtzD0SMkL2n9xT96g1PtjW+sWhbLCJC0ry8M0yiO"
   }
 
   config.action_mailer.perform_deliveries = true
