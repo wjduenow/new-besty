@@ -18,9 +18,16 @@ NewBesty::Application.routes.draw do
       get 'social'
       get 'pricing'
       get 'signup'
+      get 'test_email'
     end
   end
-  resources :users
+  resources :users do
+    collection do
+      get 'leave_reference'
+      post 'record_reference'
+      post 'request_reference'
+    end
+  end
 
   # Example resource route with options:
   #   resources :products do

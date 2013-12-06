@@ -77,4 +77,19 @@ NewBesty::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :address => "email-smtp.us-east-1.amazonaws.com",
+    :port => 465,
+    :domain => "raybeam.com",
+    :authentication => :login,
+    :user_name => "AKIAIOPYQ3FTGMMJZTJA",
+    :password => "AjXux2bdHdJRdubGTR9wuNZdOuWvLcYu1QK/KbPWYhOa"
+  }
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
 end

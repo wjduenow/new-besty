@@ -7,4 +7,14 @@ class UsersController < ApplicationController
 
 
   end
+
+  def leave_reference
+  end
+
+  def record_reference
+  end
+
+  def request_reference
+  end
+  
 end
