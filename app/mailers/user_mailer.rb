@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def reference_email(user)
     @user = user
     @url  = 'http://example.com/login'
-    mail(to: 'system@friend-os.com', subject: 'Welcome to My Awesome Site')
+    mail(to: 'wjduenow@raybeam.com', subject: 'Welcome to My Awesome Site')
   end
 
 end

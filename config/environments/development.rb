@@ -26,19 +26,8 @@ NewBesty::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    :address => "email-smtp.us-east-1.amazonaws.com",
-    :port => 465,
-    :domain => "friend-os.com",
-    :authentication => :login,
-    :user_name => "AKIAIWJRDSZKMUNRYRNQ",
-    :password => "XY80U4RrEm3s5WHr0LViaIAUQB6pPHmQnjHwcmjU"
-  }
-
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
   
+  config.action_mailer.delivery_method  = :postmark
+  config.action_mailer.postmark_settings = { :api_key => "9734056b-9b60-43be-96ff-e462ec428748"}
+
 end
