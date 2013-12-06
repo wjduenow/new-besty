@@ -19,3 +19,14 @@ true
 end
 end
 end
+
+
+begin
+if Rails.env == 'development' || Rails.env == 'test'
+  ActionMailer::Base.default :content_type => "text/html"
+  ActionMailer::Base.sendmail_settings = {
+    :location       => '/usr/sbin/sendmail',
+    :arguments      => '-i -t'
+  }
+end
+end

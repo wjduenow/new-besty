@@ -85,8 +85,8 @@ NewBesty::Application.configure do
     :port => 465,
     :domain => "friend-os.com",
     :authentication => :login,
-    :user_name => "AKIAJVNMLHSJJH47V7LA",
-    :password => "AgOXxtzD0SMkL2n9xT96g1PtjW+sWhbLCJC0ry8M0yiO"
+    :user_name => "AKIAIWJRDSZKMUNRYRNQ",
+    :password => "XY80U4RrEm3s5WHr0LViaIAUQB6pPHmQnjHwcmjU"
   }
 
   config.action_mailer.perform_deliveries = true
