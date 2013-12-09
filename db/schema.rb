@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203175817) do
+ActiveRecord::Schema.define(version: 20131208202436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,32 @@ ActiveRecord::Schema.define(version: 20131203175817) do
     t.string   "profile_image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "age"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "motto"
+    t.string   "nname"
+    t.string   "wow_name"
+    t.string   "xbox_name"
+    t.string   "furry_name"
+    t.string   "hobbies"
+    t.string   "age_range"
+    t.string   "favorite_activity"
+    t.string   "favorite_game"
+    t.string   "favorite_character"
+    t.string   "favorite_card_game"
+    t.string   "favorite_movie"
+    t.string   "favorite_show"
+    t.string   "favorite_book"
+    t.string   "favorite_band"
+    t.string   "favorite_karaoke_song"
+    t.boolean  "drinks_alcohol"
+    t.boolean  "enjoys_dancing"
+    t.boolean  "enjoys_singing"
+    t.integer  "loneliness_score"
+    t.boolean  "phone_days_a_week"
+    t.integer  "friend_days_a_weeek"
   end
 
 end
