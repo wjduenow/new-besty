@@ -1,1 +1,51 @@
-leave_reference
+
+
+<div class="container">
+        
+<h3 class="title">Leave a Friend Reference</h3>
+
+<div class="row">
+                    <div class="col-md-12">
+Thanks for taking the time to leave a reference for <%= @user.fname %>.  We think <%= @user.fname %> is a wonderful person and we are glad to see that you agree.  
+
+Friend-OS (the friend operating system) has been built from the ground up to help lonely people fill the void in their lives with a new friend. Unlike dating sites or those scary "meet-up" sites, Friend-OS is dedicated to one thing and one thing only, helping you find a new best friend.
+
+Friend-OS has successfully matched up lonely people from all across the country with new best friends.
+<br><br>
+</div>
+</div>
+
+
+
+             <div class="row">
+                    <div class="col-md-8">
+                    	<form method="post">
+                    		<div class="form-bg-1"><input type="text" class="form-control" name="name" placeholder="Your Name"></div>
+                    		<div class="form-bg-2"><input type="text" class="form-control" name="email" placeholder="Your Email"></div>
+                    		<div class="form-bg-1">
+	                            <div class="styled-select">
+	                                <select class="form-control col-md-3" name="relationshop">
+	                                    <option value="pounds">Relative</option>
+	                                    <option value="kilo">Co-Worker</option>
+	                                    <option value="kilo">Acquaintance</option>
+	                                </select>
+	                            </div>
+                        	</div>
+                    		<div class="form-bg-2"><input type="text" class="form-control" name="email" placeholder="Share Your Thoughts on <%= @user.fname %>"></div>
+                    		<button id="selectBtn" class="button_medium add_top_30">Leave Reference</button>
+                    	</form>	
+                        
+                    </div>
+                    <div class="col-md-4">
+                    	<a href="/users/1">
+                        <img src="<%= @user.profile_image %>" alt="" class="img-circle style img-responsive">
+                        <br />
+                        <h4 align="center">
+                        	<%= @user.fname %> <%= @user.lname %><br>
+                        	<%= @user.city %>, <%= @user.country %>
+                        </h4>
+                        <h5 align="center"><u>see full profile</u></h5>
+                        </a>
+                    </div>
+             </div>
+</div>

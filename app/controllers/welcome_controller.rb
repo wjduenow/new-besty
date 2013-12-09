@@ -14,6 +14,9 @@ class WelcomeController < ApplicationController
   def signup
   end
 
+  def overview
+  end
+
   def test_email
   	@user = User.new(:fname => "Wes", :lname => "Duenow", :profile_image => "http://www.ansonika.com/planar/img/profile.jpg")
   	UserMailer.reference_email(@user).deliver

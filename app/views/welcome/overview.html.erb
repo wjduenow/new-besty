@@ -1,0 +1,297 @@
+<style>
+html, body, #map_canvas { margin: 0; padding: 0; height: 100% }
+</style>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- CHECK ELEMENT ID also UPDATE CSS -->
+
+<div class="container">
+        
+ <h3 class="title">New Bestys All Around the World</h3>
+
+ The friend operating system has been built from the ground up to help lonely people fill the void in their lives with a new friend. Unlike dating sites or those scary "meet-up" sites, Friend-OS is dedicated to one thing and one thing only, helping you find a new best friend.
+<br><br>
+Friend-OS has successfully matched up lonely people from all across the country with new best friends.
+<br><br>
+
+
+             <div class="row">
+                    <div class="col-md-12">
+                        <div id="map"></div>
+                       <br><br><br><br>
+                    </div>
+             </div>
+<!--
+			<h3 class="title">What People Are Saying on Twitter</h3>
+             <div class="row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-3">
+                    </div>
+            </div
+
+             			<div class="tweetgrid"><ul class="tweetgrid-list  has-next-page"><li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content">Using Things for iPad is an absolute joy. Thanks, <a href="http://twitter.com/culturedcode">@culturedcode</a>!</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/mindfulcode/status/409789958430285824">            <div class="tweetgrid-avatar"><img src="https://pbs.twimg.com/profile_images/1685393596/381585_290630477626424_100000384211999_940427_270214483_n_normal.jpg"></div>            <div class="tweetgrid-author">Tyler Mumford</div>            <div class="tweetgrid-date">23 hours ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content">I wonder why I still keep trying different GTD apps while I always end up with <a href="http://twitter.com/culturedcode">@culturedcode</a> Things. :)</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/rudeboy_shdbx/status/406474100165464064">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-rudeboy_shdbx.jpg"></div>            <div class="tweetgrid-author">rudolf matejcek</div>            <div class="tweetgrid-date">1 week ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content">A shout out to <a href="http://twitter.com/culturedcode">@culturedcode</a> - just discovered Things for iPad and really liking it so far</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/danfosterdesign/status/406073886749388800">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-danfosterdesign.png"></div>            <div class="tweetgrid-author">Dan Foster Design</div>            <div class="tweetgrid-date">1 week ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Loving Things for iPad - you guys are awesome! <a href="http://twitter.com/search?q=%23things">#things</a></div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/djfost/status/406044388822089728">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-djfost.jpeg"></div>            <div class="tweetgrid-author">Dan Foster</div>            <div class="tweetgrid-date">1 week ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> <a href="http://twitter.com/search?q=%23things">#things</a> is the core tool for my daily work. Simple &amp; great!</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/philippkochch/status/405971622424608768">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-philippkochch.jpg"></div>            <div class="tweetgrid-author">Philipp Koch</div>            <div class="tweetgrid-date">1 week ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> it has been a while that I was so impressed about a software solution. <a href="http://twitter.com/search?q=%23Things">#Things</a> (ToDo) app was just what I was looking for :-)</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/PATWILLEMsen/status/405967212055654401">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-patwillemsen.jpeg"></div>            <div class="tweetgrid-author">Patrick Willemsen</div>            <div class="tweetgrid-date">1 week ago</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Have to admit that Things' approach to GTD is much more elegant and flexible than others.</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/dienkwik/status/404452137695842305">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-dienkwik.jpg"></div>            <div class="tweetgrid-author">Dien Kwik</div>            <div class="tweetgrid-date">November 23</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Love your product *and* the time and care you put into. Keep doing what you’re doing.</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/bb/status/404420233106296832">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-bb.jpeg"></div>            <div class="tweetgrid-author">Brian Bailey</div>            <div class="tweetgrid-date">November 23</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content">Daaamn, <a href="http://twitter.com/search?q=%23Things">#Things</a> really <a href="http://twitter.com/search?q=%23rocks">#rocks</a>. Keep the good work up <a href="http://twitter.com/culturedcode">@culturedcode</a>.</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/gerbecd/status/403621046647287808">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-gerbecd.jpg"></div>            <div class="tweetgrid-author">David Gerbec</div>            <div class="tweetgrid-date">November 21</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Best software I know for GTD experts :) Also quite useful for sales guys!</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/RwMail/status/403123708862025728">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-rwmail.jpeg"></div>            <div class="tweetgrid-author">Rene Wetzel</div>            <div class="tweetgrid-date">November 20</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Things saves my sanity daily. Thank you for an awesome app guys.</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/TimSimonFowler/status/400676875795582976">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-timsimonfowler.jpg"></div>            <div class="tweetgrid-author">Tim Fowler</div>            <div class="tweetgrid-date">November 13</div>        </a>    </div></li>
+<li class="tweetgrid-tweet">    <div class="tweetgrid-bubble">        <div class="tweetgrid-content"><a href="http://twitter.com/culturedcode">@culturedcode</a> Things is just awesome!</div>    </div>    <div class="tweetgrid-meta">        <a href="https://twitter.com/adnkremer/status/400246091943534592">            <div class="tweetgrid-avatar"><img src="/tweets/avatar-adnkremer.jpeg"></div>            <div class="tweetgrid-author">Jan Kremer</div>            <div class="tweetgrid-date">November 12</div>        </a>    </div></li></ul><div class="tweetgrid-actions  style-append"><div class="tweetgrid-buttonwrapper for-more"><a href="#" class="tweetgrid-button" onclick="javascript: CulturedTweets.nextPage();;return false;">More Tweets</a></div></div></div>
+
+                    </div>
+             </div>
+-->
+</div>
+<script>
+// TESTING ONLY: show how many markers? must be less than 200
+var howMany = 200;
+
+// when there are many markers, limit the length of total
+// animation: all markers should drop within at most 
+// this many seconds
+var maxWait = 10; // choose value between 5-15 seconds
+// when few markers are shown, the delay between each drop
+var maxDelay = 200; // choose value around 200 ms;
+// animation runs top to bottom, compares latitude in subarrays
+var latitudeSort = function(a, b) {
+    return b[1] - a[1]
+};
+
+var sitesIcon = 'http://labs.google.com/ridefinder/images/mm_20_red.png';
+
+
+var infowindow = null;
+$(document).ready(function() {
+    initialize();
+});
+
+function initialize() {
+    var centerMap = new google.maps.LatLng(42.21,-71.5,1);
+    var myOptions = {
+        zoom: 3,
+        center: centerMap,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: true
+    }
+
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+        setMarkers(map, sites);
+    });
+    infowindow = new google.maps.InfoWindow({
+        content: "loading..."
+    });
+}
+
+
+
+
+function setMarkers(map, markers) {
+    // TESTING ONLY, remove later
+    //markers.splice(0, 200 - howMany);
+
+    markers.sort(latitudeSort);
+
+    for (var i = 0; i < markers.length; i++) {
+        var sites = markers[i];
+        var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
+        (function(i, siteLatLng, sites) {
+            setTimeout(function() {
+                var marker = new google.maps.Marker({
+                    position: siteLatLng,
+                    map: map,
+                    title: sites[0],
+                    zIndex: sites[3],
+                    html: sites[4],
+                    icon: sitesIcon,
+                    animation: google.maps.Animation.DROP
+                });
+
+                var contentString = "Some content";
+                google.maps.event.addListener(marker, "click", function() {
+                    infowindow.setContent(this.html);
+                    infowindow.open(map, this);
+                });
+            }, i * Math.min(maxWait * 1000 / markers.length, maxDelay));
+        }(i, siteLatLng, sites));
+    }
+}
+
+
+var sites = [
+
+    ['Joe Bloggs', 52.1022, -2.1070, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Albany, N.Y.',42.40,-73.45,1],
+['Albuquerque, N.M.',35.5,-106.39,1],
+['Amarillo, Tex.',35.11,-101.50,1],
+['Anchorage, Alaska',61.13,-149.54,1],
+['Atlanta, Ga.',33.45,-84.23,1],
+['Austin, Tex.',30.16,-97.44,1],
+['Baker, Ore.',44.47,-117.50,1],
+['Baltimore, Md.',39.18,-76.38,1],
+['Bangor, Maine',44.48,-68.47,1],
+['Birmingham, Ala.',33.30,-86.50,1],
+['Bismarck, N.D.',46.48,-100.47,1],
+['Boise, Idaho',43.36,-116.13,1],
+['Boston, Mass.',42.21,-71.5,1],
+['Buffalo, N.Y.',42.55,-78.50,1],
+['Calgary, Alba., Can.',51.1,-114.1,1],
+['Carlsbad, N.M.',32.26,-104.15,1],
+['Charleston, S.C.',32.47,-79.56,1],
+['Charleston, W. Va.',38.21,-81.38,1],
+['Charlotte, N.C.',35.14,-80.50,1],
+['Cheyenne, Wyo.',41.9,-104.52,1],
+['Chicago, Ill.',41.50,-87.37,1],
+['Cincinnati, Ohio',39.8,-84.30,1],
+['Cleveland, Ohio',41.28,-81.37,1],
+['Columbia, S.C.',34.0,-81.2,1],
+['Columbus, Ohio',40.0,-83.1,1],
+['Dallas, Tex.',32.46,-96.46,1],
+['Denver, Colo.',39.45,-105.0,1],
+['Des Moines, Iowa',41.35,-93.37,1],
+['Detroit, Mich.',42.20,-83.3,1],
+['Dubuque, Iowa',42.31,-90.40,1],
+['Duluth, Minn.',46.49,-92.5,1],
+['Eastport, Maine',44.54,-67.0,1],
+['Edmonton, Alb., Can.',53.34,-113.28,1],
+['El Centro, Calif.',32.38,-115.33,1],
+['El Paso, Tex.',31.46,-106.29,1],
+['Eugene, Ore.',44.3,-123.5,1],
+['Fargo, N.D.',46.52,-96.48,1],
+['Flagstaff, Ariz.',35.13,-111.41,1],
+['Fort Worth, Tex.',32.43,-97.19,1],
+['Fresno, Calif.',36.44,-119.48,1],
+['Grand Junction, Colo.',39.5,-108.33,1],
+['Grand Rapids, Mich.',42.58,-85.40,1],
+['Havre, Mont.',48.33,-109.43,1],
+['Helena, Mont.',46.35,-112.2,1],
+['Honolulu, Hawaii',21.18,-157.50,1],
+['Hot Springs, Ark.',34.31,-93.3,1],
+['Houston, Tex.',29.45,-95.21,1],
+['Idaho Falls, Idaho',43.30,-112.1,1],
+['Indianapolis, Ind.',39.46,-86.10,1],
+['Jackson, Miss.',32.20,-90.12,1],
+['Jacksonville, Fla.',30.22,-81.40,1],
+['Juneau, Alaska',58.18,-134.24,1],
+['Kansas City, Mo.',39.6,-94.35,1],
+['Key West, Fla.',24.33,-81.48,1],
+['Kingston, Ont., Can.',44.15,-76.30,1],
+['Klamath Falls, Ore.',42.10,-121.44,1],
+['Knoxville, Tenn.',35.57,-83.56,1],
+['Las Vegas, Nev.',36.10,-115.12,1],
+['Lewiston, Idaho',46.24,-117.2,1],
+['Lincoln, Neb.',40.50,-96.40,1],
+['London, Ont., Can.',43.2,-81.34,1],
+['Long Beach, Calif.',33.46,-118.11,1],
+['Los Angeles, Calif.',34.3,-118.15,1],
+['Louisville, Ky.',38.15,-85.46,1],
+['Manchester, N.H.',43.0,-71.30,1],
+['Memphis, Tenn.',35.9,-90.3,1],
+['Miami, Fla.',25.46,-80.12,1],
+['Milwaukee, Wis.',43.2,-87.55,1],
+['Minneapolis, Minn.',44.59,-93.14,1],
+['Mobile, Ala.',30.42,-88.3,1],
+['Montgomery, Ala.',32.21,-86.18,1],
+['Montpelier, Vt.',44.15,-72.32,1],
+['Montreal, Que., Can.',45.30,-73.35,1],
+['Moose Jaw, Sask., Can.',50.37,-105.31,1],
+['Nashville, Tenn.',36.10,-86.47,1],
+['Nelson, B.C., Can.',49.30,-117.17,1],
+['Newark, N.J.',40.44,-74.10,1],
+['New Haven, Conn.',41.19,-72.55,1],
+['New Orleans, La.',29.57,-90.4,1],
+['New York, N.Y.',40.47,-73.58,1],
+['Nome, Alaska',64.25,-165.30,1],
+['Oakland, Calif.',37.48,-122.16,1],
+['Oklahoma City, Okla.',35.26,-97.28,1],
+['Omaha, Neb.',41.15,-95.56,1],
+['Ottawa, Ont., Can.',45.24,-75.43,1],
+['Philadelphia, Pa.',39.57,-75.10,1],
+['Phoenix, Ariz.',33.29,-112.4,1],
+['Pierre, S.D.',44.22,-100.21,1],
+['Pittsburgh, Pa.',40.27,-79.57,1],
+['Portland, Maine',43.40,-70.15,1],
+['Portland, Ore.',45.31,-122.41,1],
+['Providence, R.I.',41.50,-71.24,1],
+['Quebec, Que., Can.',46.49,-71.11,1],
+['Raleigh, N.C.',35.46,-78.39,1],
+['Reno, Nev.',39.30,-119.49,1],
+['Richfield, Utah',38.46,-112.5,1],
+['Richmond, Va.',37.33,-77.29,1],
+['Roanoke, Va.',37.17,-79.57,1],
+['Sacramento, Calif.',38.35,-121.30,1],
+['St. John, N.B., Can.',45.18,-66.10,1],
+['St. Louis, Mo.',38.35,-90.12,1],
+['Salt Lake City, Utah',40.46,-111.54,1],
+['San Antonio, Tex.',29.23,-98.33,1],
+['San Diego, Calif.',32.42,-117.10,1],
+['San Francisco, Calif.',37.47,-122.26,1],
+['San Jose, Calif.',37.20,-121.53,1],
+['San Juan, P.R.',18.30,-66.10,1],
+['Santa Fe, N.M.',35.41,-105.57,1],
+['Savannah, Ga.',32.5,-81.5,1],
+['Seattle, Wash.',47.37,-122.20,1],
+['Shreveport, La.',32.28,-93.42,1],
+['Sioux Falls, S.D.',43.33,-96.44,1],
+['Sitka, Alaska',57.10,-135.15,1],
+['Spokane, Wash.',47.40,-117.26,1],
+['Springfield, Ill.',39.48,-89.38,1],
+['Springfield, Mass.',42.6,-72.34,1],
+['Springfield, Mo.',37.13,-93.17,1],
+['Syracuse, N.Y.',43.2,-76.8,1],
+['Tampa, Fla.',27.57,-82.27,1],
+['Toledo, Ohio',41.39,-83.33,1],
+['Toronto, Ont., Can.',43.40,-79.24,1],
+['Tulsa, Okla.',36.9,-95.59,1],
+['Vancouver, B.C., Can.',49.13,-123.6,1],
+['Victoria, B.C., Can.',48.25,-123.21,1],
+['Virginia Beach, Va.',36.51,-75.58,1],
+['Washington, D.C.',38.53,-77.2,1],
+['Wichita, Kan.',37.43,-97.17,1],
+['Wilmington, N.C.',34.14,-77.57,1],
+['Winnipeg, Man., Can.',49.54,-97.7,1],
+['Switzerland, Bern', 46.57, 7.28, 1],
+['France, Paris', 48.50, 2.20, 1],
+['Germany, Berlin', 52.30, 13.25, 1],
+['Netherlands, Amsterdam', 52.23, 4.54, 1],
+['Denmark, Copenhagen', 55.41, 12.34, 1],
+['Russian Federation, Moskva',55.45, 37.35, 1],
+['Spain, Madrid', 40.25, -3.45, 1],
+['Portugal, Lisbon',38.42, -9.10, 1],
+['Ireland, Dublin', 53.21, -6.15, 1],
+['Austria, Vienna', 48.12, 16.22,1],
+['Italy, Rome', 41.54, 12.29, 1],
+['Greece, Athens', 37.58, 23.46,1],
+['Poland, Warsaw', 52.13, 21.00, 1],
+['Libyan Arab Jamahiriya, Tripoli', 32.49, 13.07, 1],
+['China, Beijing', 39.55, 116.20, 1],
+['Republic of Korea, Seoul', 37.31, 126.58, 1],
+['Romania, Bucuresti', 44.27, 26.10, 1],
+
+
+    ['Joe Bloggs', 52.2772526916, 0.593748880826, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.9567756623, -1.09756171526, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 54.0191834942, -0.969797324001, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.4019847226, -1.53030594276, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.2794238419, 0.0189813813974, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 52.3165127405, -0.233062539007, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.7826037971, -0.0252837597021, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 52.7947172009, 0.710775720838, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.7340490876, -0.94106038102, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Joe Bloggs', 53.4833661944, 0.960242719011, 1, "Member &nbsp;<a href=\"#\">Joe Bloggs</a>"],
+    ['Peter Peterson', 52.0022, -2.0070, 1, "Member &nbsp;<a href=\"#\">Peter Peterson</a>"]
+
+    ];
+
+    </script>

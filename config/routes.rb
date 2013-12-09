@@ -19,6 +19,7 @@ NewBesty::Application.routes.draw do
       get 'pricing'
       get 'signup'
       get 'test_email'
+      get 'overview'
     end
   end
   resources :users do
