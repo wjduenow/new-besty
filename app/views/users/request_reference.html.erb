@@ -4,10 +4,6 @@
         
 <h3 class="title">Request a Friend Reference</h3>
 
-
-
-
-
              <div class="row">
                     <div class="col-md-8">
                     	<%= form_for @reference, url: {action: "send_reference_email"}, html: {class: "nifty_form"} do |f| %>
@@ -23,7 +19,7 @@
                                 </div>
                             </div>
                             <%= f.hidden_field :user_id, value: @user.id %>
-                    		<button id="selectBtn" class="button_medium add_top_30">Leave Reference</button>
+                    		<button id="selectBtn" class="button_medium add_top_30">Request Reference</button>
                     	<% end %>	
                         
                     </div>
