@@ -89,9 +89,10 @@ class UsersController < ApplicationController
 
   def record_reference
     @reference = Reference.new(reference_params)
+
     if @reference.save
       flash[:notice] = 'Reference Recorded'
-      redirect_to :action => 'index'
+      redirect_to "/users/#{params[:reference][:user_id]}"
     else
       render :action => 'edit'
     end
