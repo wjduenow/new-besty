@@ -4,44 +4,7 @@
 
  <%= form_for @user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
   
-  <table>
-  	<tr><td>first name: </td><td><%= f.text_field :fname %></td><tr>
-    <tr><td>last name: </td><td><%= f.text_field :lname %></td><tr>
-    <tr><td>nick name: </td><td><%= f.text_field :nname %></td><tr>
-    <tr><td>city: </td><td><%= f.text_field :city %></td><tr>
-    <tr><td>state: </td><td><%= f.text_field :state %></td><tr>
-    <tr><td>country: </td><td><%= f.text_field :country %></td><tr>
-    <tr><td>WOW Name: </td><td><%= f.text_field :wow_name %></td><tr>
-    <tr><td>XBox Name: </td><td><%= f.text_field :xbox_name %></td><tr>
-    <tr><td>Furry Name: </td><td><%= f.text_field :furry_name %></td><tr>
-
-    <tr><td>motto: </td><td><%= f.text_field :motto %></td><tr>
-    <tr><td>hobbies: </td><td><%= f.text_field :hobbies %></td><tr>
-    <tr><td>age_range: </td><td><%= f.text_field :age_range %></td><tr>
-    <tr><td>favorite_activity: </td><td><%= f.text_field :favorite_activity %></td><tr>
-    <tr><td>favorite_game: </td><td><%= f.text_field :favorite_game %></td><tr>
-    <tr><td>favorite_character: </td><td><%= f.text_field :favorite_character %></td><tr>
-    <tr><td>favorite_card_game: </td><td><%= f.text_field :favorite_card_game %></td><tr>
-    <tr><td>favorite_movie: </td><td><%= f.text_field :favorite_movie %></td><tr>
-    <tr><td>favorite_show: </td><td><%= f.text_field :favorite_show %></td><tr>
-    <tr><td>favorite_book: </td><td><%= f.text_field :favorite_book %></td><tr>
-    <tr><td>favorite_band: </td><td><%= f.text_field :favorite_band %></td><tr>
-    <tr><td>favorite_karaoke_song: </td><td><%= f.text_field :favorite_karaoke_song %></td><tr>
-    <tr><td>drinks_alcohol: </td><td><%= f.text_field :drinks_alcohol %></td><tr>
-
-    <tr><td>enjoys_dancing: </td><td><%= f.text_field :enjoys_dancing %></td><tr>
-    <tr><td>enjoys_singing: </td><td><%= f.text_field :enjoys_singing %></td><tr>
-    <tr><td>loneliness_score: </td><td><%= f.text_field :loneliness_score %></td><tr>
-    <tr><td>phone_days_a_week: </td><td><%= f.text_field :phone_days_a_week %></td><tr>
-    <tr><td>friend_days_a_weeek: </td><td><%= f.text_field :friend_days_a_weeek %></td><tr>
-    <tr><td>reason_since: </td><td><%= f.text_field :reason_since %></td><tr>
-    <tr><td>profile_image: </td><td><%= f.text_field :profile_image %></td><tr>
-    <tr><td>looking_for: </td><td><%= f.text_field :looking_for %></td><tr>
-
-  
-    <tr><td>Description: </td><td><%= f.text_area :description, size: "60x12" %></td><tr>
-    <tr><td><%= f.submit "Create" %></td><tr>
-  </table>
+  <%= render partial: "user_form", locals: {f: f} %>
 
 <% end %>
 </div>

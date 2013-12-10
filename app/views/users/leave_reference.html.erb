@@ -19,21 +19,24 @@ Friend-OS has successfully matched up lonely people from all across the country 
 
              <div class="row">
                     <div class="col-md-8">
-                    	<form method="post">
-                    		<div class="form-bg-1"><input type="text" class="form-control" name="name" placeholder="Your Name"></div>
-                    		<div class="form-bg-2"><input type="text" class="form-control" name="email" placeholder="Your Email"></div>
+                    	<%= form_for @reference, url: {action: "record_reference"}, html: {class: "nifty_form"} do |f| %>
+                    		<div class="form-bg-1"><%= f.text_field :name, :placeholder => "Your Name", class: "form-control" %></div>
+                    		<div class="form-bg-2"><%= f.text_field :email, :placeholder => "Your Email Address", class: "form-control" %></div>
                     		<div class="form-bg-1">
 	                            <div class="styled-select">
-	                                <select class="form-control col-md-3" name="relationshop">
-	                                    <option value="pounds">Relative</option>
-	                                    <option value="kilo">Co-Worker</option>
-	                                    <option value="kilo">Acquaintance</option>
+	                                <select class="form-control col-md-3" name="reference[relationship]">
+	                                    <option value="Relative">Relative</option>
+	                                    <option value="Co-Worker">Co-Worker</option>
+	                                    <option value="Acquaintance">Acquaintance</option>
 	                                </select>
 	                            </div>
                         	</div>
-                    		<div class="form-bg-2"><input type="text" class="form-control" name="email" placeholder="Share Your Thoughts on <%= @user.fname %>"></div>
+                    		<div class="form-bg-2">
+                                <%= f.text_field :comment, :placeholder => "Share Your Thoughts on #{@user.fname}", class: "form-control" %>
+                                </div>
+                            <%= f.hidden_field :user_id, value: @user.id %>
                     		<button id="selectBtn" class="button_medium add_top_30">Leave Reference</button>
-                    	</form>	
+                    	<% end %>	
                         
                     </div>
                     <div class="col-md-4">

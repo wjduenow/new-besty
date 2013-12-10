@@ -193,6 +193,28 @@
                     
                 </div><!-- End col-md-5 -->
             </div> <!-- End row -->
+
+        <% if @user.references.count > 0 %>
+            <h3 class="title">Personal References</h3>
+            
+            <div class="row">
+                <div class="col-md-12" align="center">
+                    
+                    <% @user.references.each do |r| %>
+
+
+                        <h4><i>"<%= r.comment %>"</i></h4>
+                        <h5><%= r.name %> (<%= r.relationship %>)
+                        <br>
+                        <%= r.created_at.strftime("%Y-%m-%d") %>
+                        </h5>
+
+                    <% end %>
+
+                    
+                </div><!-- End col-md-5 -->
+            </div> <!-- End row -->
+         <% end %>
  </div> 
 
 

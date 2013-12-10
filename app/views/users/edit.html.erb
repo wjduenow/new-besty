@@ -1,0 +1,10 @@
+<div class="container">
+        
+ <h3 class="title">Update User</h3>
+
+ <%= form_for @user, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
+  
+  <%= render partial: "user_form", locals: {f: f} %>
+
+<% end %>
+</div>
