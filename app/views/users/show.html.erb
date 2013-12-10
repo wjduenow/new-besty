@@ -30,20 +30,28 @@
                 <div class="col-md-8">
                             
                         <h3>Quick Stats</h3>
+
+                        <% if @user.wow_name.size > 0 %>
                         <div class="row bg-1">
 
                             <div class="col-md-5"><h5>WOW Name</h5></div>
                             <div class="col-md-4"><h6><%= @user.wow_name %></h6></div>
                          </div>
+                         <% end %>
+
+                         <% if @user.xbox_name.size > 0 %>
                          <div class="row bg-2">
                             <div class="col-md-5"><h5>XBox Name</h5></div>
                             <div class="col-md-4"><h6><%= @user.xbox_name %></h6></div>
                          </div>
-
+                         <% end %>
+ 
+                        <% if @user.furry_name.size > 0 %>
                          <div class="row bg-1">
                             <div class="col-md-5"><h5>Furry Name</h5></div>
                             <div class="col-md-4"><h6><%= @user.furry_name %></h6></div>
                          </div>
+                        <% end %>
 
                          <div class="row bg-2">
                             <div class="col-md-5"><h5>Favorite Activity</h5></div>
@@ -134,15 +142,13 @@
 
                     <img src="http://upload.wikimedia.org/wikipedia/commons/a/aa/Crystal_package_games_card.png" class="img-thumbnail">
 
+                    <% if @user.furry_name.size > 0 %>
 
+                        <img src="/img/badges/furry.jpeg" class="img-thumbnail">
 
-                   
+                        <img src="/img/badges/brony.jpeg" class="img-thumbnail">
 
-                    
-
-                    
-
-                   
+                    <% end %>
 
 
 
