@@ -126,9 +126,15 @@
 
    <div class="col-md-4">
                     <h3>Badges of Honor</h3>
-                    <img src="http://img-cache.cdn.gaiaonline.com/6dd4941765c20917f8e4a4968017500e/http://i723.photobucket.com/albums/ww234/wowaccountvow/wow_icon.png" class="img-thumbnail">
 
+                    <% if @user.wow_name.size > 0 %>
+                    <img src="http://img-cache.cdn.gaiaonline.com/6dd4941765c20917f8e4a4968017500e/http://i723.photobucket.com/albums/ww234/wowaccountvow/wow_icon.png" class="img-thumbnail">
+                    <% end %>
+
+                    <% if @user.wow_name.size > 0 %>
                     <img src="http://png-3.findicons.com/files/icons/832/social_and_web/64/xbox_360.png" class="img-thumbnail">
+                    <% end %>
+
                     <img src="https://static-s.foursquare.com/img/categories/nightlife/karaoke_64-7afd4d4ca138ed8fc8783fe9ce9048f1.png" class="img-thumbnail">
 
                     <img src="http://www.goaroostookoutdoors.com/sites/default/files/activities/icons/icon_hiking_blk.png" class="img-thumbnail">
