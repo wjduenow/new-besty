@@ -26,7 +26,8 @@ NewBesty::Application.routes.draw do
     collection do
       get 'leave_reference'
       post 'record_reference'
-      post 'request_reference'
+      get 'request_reference'
+      post 'send_reference_email'
     end
   end
 

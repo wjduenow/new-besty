@@ -1,0 +1,42 @@
+
+
+<div class="container">
+        
+<h3 class="title">Request a Friend Reference</h3>
+
+
+
+
+
+             <div class="row">
+                    <div class="col-md-8">
+                    	<%= form_for @reference, url: {action: "send_reference_email"}, html: {class: "nifty_form"} do |f| %>
+                    		<div class="form-bg-1"><%= f.text_field :name, :placeholder => "Requestee Name", class: "form-control" %></div>
+                            <div class="form-bg-2"><%= f.text_field :email, :placeholder => "Requestee Email Address", class: "form-control" %></div>
+                            <div class="form-bg-1">
+                                <div class="styled-select">
+                                    <select class="form-control col-md-3" name="reference[relationship]">
+                                        <option value="Relative">Relative</option>
+                                        <option value="Co-Worker">Co-Worker</option>
+                                        <option value="Acquaintance">Acquaintance</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <%= f.hidden_field :user_id, value: @user.id %>
+                    		<button id="selectBtn" class="button_medium add_top_30">Leave Reference</button>
+                    	<% end %>	
+                        
+                    </div>
+                    <div class="col-md-4">
+                    	<a href="/users/1">
+                        <img src="<%= @user.profile_image %>" alt="" class="img-circle style img-responsive">
+                        <br />
+                        <h4 align="center">
+                        	<%= @user.fname %> <%= @user.lname %><br>
+                        	<%= @user.city %>, <%= @user.country %>
+                        </h4>
+                        <h5 align="center"><u>see full profile</u></h5>
+                        </a>
+                    </div>
+             </div>
+</div>

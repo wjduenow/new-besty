@@ -4,13 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-	Dear <b><%= "Bob" %></b>,
+	Dear <b><%= @reference['name'] %></b>,
 	<br>
 	<br>
-	My apologies for bothing you with a personal email, however as a <b><%= "close colleague" %></b> I am hoping you can help me with a personal matter.
+	My apologies for bothing you with a personal email, however as a <b><%= @reference['relationship'] %></b> I am hoping you can help me with a personal matter.
 	<br>
 	<br>
-	Ever since <b><%= "moving here from Ireland" %></b>, I have had a hard time making new friends.  As you can imagine it can be somewhat lonely at times.  
+	Ever since <b><%= @user.reason_since %></b>, I have had a hard time making new friends.  As you can imagine it can be somewhat lonely at times.  
 	<br>
 	<br>
 	I decided to join a great website I found <a href="http://www.Friend-OS.com?iexfd=<%= Digest::MD5.hexdigest("wes") %>">Friend-OS.com</a>, which is dedicated to helping people in my situation find new friends.
@@ -19,7 +19,7 @@
 	The site is very exclusive and I was hoping you might be able to leave me a personal reference on it, it is very quick (2-3 minutes) and I would really appreciate it.  You can leave your reference at the link below:
 	<br>
 	<br>
-	<a href="http://localhost:3000/users/leave_reference?iexfd=<%= Digest::MD5.hexdigest("wes") %>&id=<%= @user.id %>">Referral Link</a>
+	<a href="http://www.friend-os.com/users/leave_reference?iexfd=<%= Digest::MD5.hexdigest("wes") %>&id=<%= @user.id %>">Referral Link</a>
 	<br>
 	<br>
 	Thanks again, this really means alot to me, I can't wait to get started on my new friendship.

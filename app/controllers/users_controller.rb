@@ -98,6 +98,14 @@ class UsersController < ApplicationController
   end
 
   def request_reference
+    @user = User.find(params[:id])
+    @reference = Reference.new
+  end
+
+  def send_reference_email
+    @user = User.find(params[:reference][:user_id])
+    UserMailer.reference_email(@user, params[:reference]).deliver
+    redirect_to :action => 'index'
   end
 
   private
